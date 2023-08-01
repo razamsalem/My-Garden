@@ -1,8 +1,12 @@
 body {
     color: white;
     text-align: center;
-    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/img/garden.jpg);
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/bg/garden.jpg);
     background-size: cover;
+}
+
+img {
+    height: 100px;
 }
 
 table {
