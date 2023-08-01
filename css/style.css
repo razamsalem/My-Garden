@@ -1,0 +1,61 @@
+body {
+    color: white;
+    text-align: center;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/img/garden.jpg);
+    background-size: cover;
+}
+
+table {
+    margin: auto;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.cell img {
+    width: 25px;
+    height: auto;
+}
+
+.floor {
+    background-color: rgba(99, 204, 99, 0.799);
+}
+
+.wall {
+    background-color: rgb(215, 30, 52);
+}
+
+.btn {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lightgreen;
+    color: rgb(215, 30, 52);
+    font-weight: 600;
+    padding: 5px 220px;
+    margin-bottom: 2px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(215, 30, 52);
+    color: lightgreen;
+}
+
+.hidden {
+    display: none;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(-225deg , rgb(238, 6, 6), rgb(189, 32, 32), #2a61a1 , rgb(100, 23, 194), rgb(203, 44, 102));
+    background-clip: text;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neighbors {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+}
