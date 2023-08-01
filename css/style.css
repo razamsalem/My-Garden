@@ -47,15 +47,45 @@ table {
     color: lightgreen;
 }
 
+.modal {
+    background: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url(../img/bg/disrespectful-kid.png);
+    background-size: cover;
+    background-position: center;
+    color: lightgreen;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 5px;
+    height: 150px;
+    text-align: center;
+    line-height: 50px;
+    width: 50%;
+    border-radius: 10px;
+    z-index: 2;
+    margin: auto;
+}
+
+.modal button {
+    cursor: pointer;
+    background-color: black;
+    color: lightgreen;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+}
+
+.modal button:hover {
+    background-color: lightgreen;
+    color: black;
+    font-weight: 600;
+}
+
 .hidden {
     display: none;
 }
 
 .gradient-text {
-    background: -webkit-linear-gradient(-225deg , rgb(238, 6, 6), rgb(189, 32, 32), #2a61a1 , rgb(100, 23, 194), rgb(203, 44, 102));
+    background: -webkit-linear-gradient(-225deg, rgb(238, 6, 6), rgb(189, 32, 32), #2a61a1, rgb(100, 23, 194), rgb(203, 44, 102));
     background-clip: text;
     -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 .neighbors {

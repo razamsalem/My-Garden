@@ -23,6 +23,7 @@ var gRandBallInterval
 var gTarget
 
 function onInitGame() {
+	// gameMusic()
 	gTarget = getRandomInt(10, 51)
 	EL_H1_SPAN.innerText = gTarget
 	gBallCount = 0
@@ -122,12 +123,13 @@ function moveTo(i, j) {
 		}
 
 		if (targetCell.gameElement === GLUE) {
-			gIsStuck = true;
+			gIsStuck = true
+			playStickySound()
 			console.log('glued', i, j)
 			setTimeout(() => {
 				gIsStuck = false;
 
-			}, 3000);
+			}, 4000);
 		}
 
 		// TODO: Move the gamer
@@ -232,6 +234,7 @@ function endGame() {
 	elHeader.classList.add('hidden')
 	clearInterval(gRandBallInterval)
 	clearInterval(gGlueInterval)
+	clearInterval
 	elBtn.classList.toggle('hidden')
 }
 
@@ -246,9 +249,31 @@ function onResetGame(btn) {
 	onInitGame()
 }
 
+function onStartGame(btn) {
+	const elModal = document.querySelector('.modal')
+	elModal.classList.add('hidden')
+	btn.classList.add('hidden')
+
+	onInitGame()
+}
+
+function gameMusic() {
+	const music = new Audio('sound/background-music.mp3')
+	music.play()
+}
+
+function playStartGameSound(){
+	const sound = new Audio('sound/start-game.mp3')
+	sound.play()
+}
 
 function playCollectSound() {
 	const sound = new Audio('sound/beep.mp3')
+	sound.play()
+}
+
+function playStickySound() {
+	const sound = new Audio('sound/sticky-sound.mp3')
 	sound.play()
 }
 
@@ -256,6 +281,7 @@ function playVictorySound() {
 	const sound = new Audio('sound/victory.mp3')
 	sound.play()
 }
+
 
 function countNeighbors(rowIdx, colIdx, gBoard) {
 	neighborsCount = 0
@@ -292,7 +318,7 @@ function randomGluePos() {
 			gBoard[i][j].gameElement = null
 			renderCell({ i, j }, '')
 		}
-	}, 3000);
+	}, 4000);
 }
 
 /////////////////////////////////////
